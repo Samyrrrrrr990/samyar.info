@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samyar Shafiee's Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samyar Animation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0e0e0e;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 100px;
+      color: #fff;
+      position: relative;
+      transition: transform 0.1s ease;
+    }
+
+    body:hover h1 {
+      color: #ff4500;
+    }
+
+    body {
+      perspective: 1000px;
+    }
+
+    body:hover h1 {
+      transform: rotateY(30deg) rotateX(20deg);
+    }
+
+    body:hover h1:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 2px solid #ff4500;
+      animation: borderAnim 1s ease-in-out infinite;
+    }
+
+    @keyframes borderAnim {
+      0% {
+        transform: translateX(0) translateY(0);
+      }
+      50% {
+        transform: translateX(10px) translateY(-10px);
+      }
+      100% {
+        transform: translateX(0) translateY(0);
+      }
+    }
+
+    body:hover h1 {
+      transform: rotateY(calc(var(--x) * 1deg)) rotateX(calc(var(--y) * 1deg));
+    }
+
+    body {
+      --x: 0;
+      --y: 0;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-card">
-            <h1>Samyar Shafiee</h1>
-            <p><strong>Date of Birth:</strong> 2009</p>
-            <p><strong>School:</strong> Cardinal Carter Catholic High School</p>
-        </div>
-    </div>
+  <h1>Samyar</h1>
+
+  <script>
+    document.addEventListener('mousemove', (event) => {
+      const x = (window.innerWidth / 2 - event.pageX) / 20;
+      const y = (window.innerHeight / 2 - event.pageY) / 20;
+
+      document.body.style.setProperty('--x', x);
+      document.body.style.setProperty('--y', y);
+    });
+  </script>
 </body>
 </html>
