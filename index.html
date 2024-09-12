@@ -15,6 +15,7 @@
 
     body {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -25,13 +26,13 @@
 
     h1 {
       font-size: 100px;
-      color: #fff;
+      color: #00f;
       position: relative;
       transition: transform 0.1s ease;
     }
 
     body:hover h1 {
-      color: #ff4500;
+      color: #00bfff;
     }
 
     body {
@@ -49,7 +50,7 @@
       left: -10px;
       right: -10px;
       bottom: -10px;
-      border: 2px solid #ff4500;
+      border: 2px solid #00bfff;
       animation: borderAnim 1s ease-in-out infinite;
     }
 
@@ -73,10 +74,28 @@
       --x: 0;
       --y: 0;
     }
+
+    button {
+      margin-top: 50px;
+      padding: 15px 30px;
+      background-color: #00f;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00bfff;
+    }
   </style>
 </head>
 <body>
   <h1>Samyar</h1>
+  <button onclick="window.location.href='https://linktr.ee/samyar1388'">Click for More Information</button>
 
   <script>
     document.addEventListener('mousemove', (event) => {
