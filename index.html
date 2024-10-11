@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samyar Animation</title>
+  <title>Samyar's Futuristic Website</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
     * {
       margin: 0;
@@ -14,97 +14,145 @@
     }
 
     body {
+      height: 100vh;
+      background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background-color: #0e0e0e;
-      overflow: hidden;
-      font-family: 'Poppins', sans-serif;
+      flex-direction: column;
+      font-family: 'Raleway', sans-serif;
     }
 
     h1 {
-      font-size: 100px;
-      color: #00f;
+      font-size: 120px;
+      background: linear-gradient(90deg, #00d4ff, #090979);
+      background-clip: text;
+      color: transparent;
+      letter-spacing: 8px;
+      text-transform: uppercase;
       position: relative;
-      transition: transform 0.1s ease;
+      animation: glitch 3s infinite;
+      transform: translateZ(0);
+      filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
     }
 
-    body:hover h1 {
-      color: #00bfff;
-    }
-
-    body {
-      perspective: 1000px;
-    }
-
-    body:hover h1 {
-      transform: rotateY(30deg) rotateX(20deg);
-    }
-
-    body:hover h1:before {
-      content: '';
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      border: 2px solid #00bfff;
-      animation: borderAnim 1s ease-in-out infinite;
-    }
-
-    @keyframes borderAnim {
+    @keyframes glitch {
       0% {
-        transform: translateX(0) translateY(0);
+        text-shadow: 2px 2px rgba(255,0,0,0.75);
+        transform: translate(0, 0);
       }
-      50% {
-        transform: translateX(10px) translateY(-10px);
+      20% {
+        text-shadow: -2px -2px rgba(0,255,255,0.75);
+        transform: translate(-5px, 5px);
+      }
+      40% {
+        text-shadow: 2px -2px rgba(255,0,255,0.75);
+        transform: translate(5px, -5px);
+      }
+      60% {
+        text-shadow: -2px 2px rgba(0,255,0,0.75);
+        transform: translate(10px, -10px);
+      }
+      80% {
+        text-shadow: 2px 2px rgba(255,255,0,0.75);
+        transform: translate(-5px, 10px);
       }
       100% {
-        transform: translateX(0) translateY(0);
+        text-shadow: none;
+        transform: translate(0, 0);
       }
     }
 
-    body:hover h1 {
-      transform: rotateY(calc(var(--x) * 1deg)) rotateX(calc(var(--y) * 1deg));
+    h1:before, h1:after {
+      content: 'Samyar';
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: transparent;
+      overflow: hidden;
     }
 
-    body {
-      --x: 0;
-      --y: 0;
+    h1:before {
+      z-index: -1;
+      text-shadow: -2px 0 red;
+      animation: glitch1 2s infinite;
     }
 
-    button {
+    h1:after {
+      z-index: -2;
+      text-shadow: -2px 0 blue;
+      animation: glitch2 2s infinite;
+    }
+
+    @keyframes glitch1 {
+      0% { clip: rect(24px, 9999px, 44px, 0); }
+      25% { clip: rect(0px, 9999px, 35px, 0); }
+      50% { clip: rect(15px, 9999px, 50px, 0); }
+      75% { clip: rect(0px, 9999px, 35px, 0); }
+      100% { clip: rect(25px, 9999px, 45px, 0); }
+    }
+
+    @keyframes glitch2 {
+      0% { clip: rect(56px, 9999px, 76px, 0); }
+      25% { clip: rect(20px, 9999px, 35px, 0); }
+      50% { clip: rect(50px, 9999px, 90px, 0); }
+      75% { clip: rect(0px, 9999px, 25px, 0); }
+      100% { clip: rect(50px, 9999px, 90px, 0); }
+    }
+
+    .button-container {
       margin-top: 50px;
-      padding: 15px 30px;
-      background-color: #00f;
-      border: none;
-      border-radius: 10px;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-      transition: background-color 0.3s ease;
+      position: relative;
     }
 
-    button:hover {
-      background-color: #00bfff;
+    .button {
+      padding: 15px 40px;
+      font-size: 20px;
+      background: linear-gradient(135deg, #00d4ff, #090979);
+      border: 2px solid #00d4ff;
+      border-radius: 50px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      font-family: 'Raleway', sans-serif;
+      box-shadow: 0 0 20px rgba(0,0,255,0.5);
     }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      height: 100%;
+      width: 200%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(30deg);
+      transition: 0.5s;
+    }
+
+    .button:hover::before {
+      left: 150%;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #090979, #00d4ff);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 200, 255, 0.6);
+    }
+
   </style>
 </head>
 <body>
+
   <h1>Samyar</h1>
-  <button onclick="window.location.href='https://linktr.ee/samyar1388'">Click for More Information</button>
 
-  <script>
-    document.addEventListener('mousemove', (event) => {
-      const x = (window.innerWidth / 2 - event.pageX) / 20;
-      const y = (window.innerHeight / 2 - event.pageY) / 20;
+  <div class="button-container">
+    <button class="button" onclick="window.location.href='https://linktr.ee/samyar1388'">
+      Click for More Information
+    </button>
+  </div>
 
-      document.body.style.setProperty('--x', x);
-      document.body.style.setProperty('--y', y);
-    });
-  </script>
 </body>
 </html>
