@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samyar's Futuristic Website</title>
+  <title>Samyar's Masculine Website</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 
     * {
       margin: 0;
@@ -15,90 +15,41 @@
 
     body {
       height: 100vh;
-      background: linear-gradient(135deg, #020024, #090979, #00d4ff);
+      background: linear-gradient(135deg, #111, #222, #333);
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: 'Raleway', sans-serif;
+      font-family: 'Oswald', sans-serif;
+      color: #fff;
     }
 
     h1 {
-      font-size: 120px;
-      background: linear-gradient(90deg, #00d4ff, #090979);
+      font-size: 140px;
+      background: linear-gradient(90deg, #111, #ff4500, #111);
       background-clip: text;
       color: transparent;
-      letter-spacing: 8px;
+      letter-spacing: 10px;
       text-transform: uppercase;
       position: relative;
-      animation: glitch 3s infinite;
-      transform: translateZ(0);
-      filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+      font-weight: 900;
+      animation: pulse 2s infinite ease-in-out;
     }
 
-    @keyframes glitch {
+    @keyframes pulse {
       0% {
-        text-shadow: 2px 2px rgba(255,0,0,0.75);
-        transform: translate(0, 0);
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
       }
-      20% {
-        text-shadow: -2px -2px rgba(0,255,255,0.75);
-        transform: translate(-5px, 5px);
-      }
-      40% {
-        text-shadow: 2px -2px rgba(255,0,255,0.75);
-        transform: translate(5px, -5px);
-      }
-      60% {
-        text-shadow: -2px 2px rgba(0,255,0,0.75);
-        transform: translate(10px, -10px);
-      }
-      80% {
-        text-shadow: 2px 2px rgba(255,255,0,0.75);
-        transform: translate(-5px, 10px);
+      50% {
+        transform: scale(1.1);
+        text-shadow: 0 0 30px #ff4500, 0 0 50px #ff4500;
       }
       100% {
-        text-shadow: none;
-        transform: translate(0, 0);
+        transform: scale(1);
+        text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500;
       }
-    }
-
-    h1:before, h1:after {
-      content: 'Samyar';
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: transparent;
-      overflow: hidden;
-    }
-
-    h1:before {
-      z-index: -1;
-      text-shadow: -2px 0 red;
-      animation: glitch1 2s infinite;
-    }
-
-    h1:after {
-      z-index: -2;
-      text-shadow: -2px 0 blue;
-      animation: glitch2 2s infinite;
-    }
-
-    @keyframes glitch1 {
-      0% { clip: rect(24px, 9999px, 44px, 0); }
-      25% { clip: rect(0px, 9999px, 35px, 0); }
-      50% { clip: rect(15px, 9999px, 50px, 0); }
-      75% { clip: rect(0px, 9999px, 35px, 0); }
-      100% { clip: rect(25px, 9999px, 45px, 0); }
-    }
-
-    @keyframes glitch2 {
-      0% { clip: rect(56px, 9999px, 76px, 0); }
-      25% { clip: rect(20px, 9999px, 35px, 0); }
-      50% { clip: rect(50px, 9999px, 90px, 0); }
-      75% { clip: rect(0px, 9999px, 25px, 0); }
-      100% { clip: rect(50px, 9999px, 90px, 0); }
     }
 
     .button-container {
@@ -108,51 +59,37 @@
 
     .button {
       padding: 15px 40px;
-      font-size: 20px;
-      background: linear-gradient(135deg, #00d4ff, #090979);
-      border: 2px solid #00d4ff;
-      border-radius: 50px;
+      font-size: 22px;
+      background: linear-gradient(135deg, #ff4500, #111);
+      border: 2px solid #ff4500;
+      border-radius: 0;
       color: white;
       cursor: pointer;
       position: relative;
       overflow: hidden;
       transition: all 0.4s ease;
-      font-family: 'Raleway', sans-serif;
-      box-shadow: 0 0 20px rgba(0,0,255,0.5);
+      font-family: 'Oswald', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
     }
 
     .button::before {
       content: '';
       position: absolute;
       top: 0;
-      left: -50%;
+      left: -100%;
       height: 100%;
-      width: 200%;
-      background: rgba(255, 255, 255, 0.3);
-      transform: skewX(30deg);
+      width: 300%;
+      background: rgba(255, 69, 0, 0.3);
+      transform: skewX(45deg);
       transition: 0.5s;
     }
 
     .button:hover::before {
-      left: 150%;
+      left: 100%;
     }
 
     .button:hover {
-      background: linear-gradient(135deg, #090979, #00d4ff);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 200, 255, 0.6);
-    }
-
-  </style>
-</head>
-<body>
-
-  <h1>Samyar</h1>
-
-  <div class="button-container">
-    <button class="button" onclick="window.location.href='https://linktr.ee/samyar1388'">
-      Click for More Information
-    </button>
-  </div>
-
-</body>
-</html>
+      background: linear-gradient(135deg, #111, #ff4500);
+     
