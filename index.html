@@ -7,7 +7,17 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <!-- Add extracted structure here -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute top-1/4 left-1/3 w-64 h-64 bg-blue-800 opacity-20 rounded-full filter blur-3xl animate-blob"></div>
+        <div class="absolute bottom-1/4 right-1/3 w-80 h-80 bg-blue-900 opacity-15 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-700 opacity-10 rounded-full filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+    <button id="navButton" class="p-3 rounded-full transition-all duration-300 transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon">
+            <path d="M12 2v20M2 12h20"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
