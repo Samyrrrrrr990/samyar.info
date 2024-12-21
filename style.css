@@ -1,71 +1,82 @@
-/* Reset */
+/* Reset and Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #000;
   color: #fff;
-  margin: 0;
-  line-height: 1.6;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-/* Header */
-.header {
+/* General Section Styling */
+section {
   text-align: center;
   padding: 2rem;
 }
-.title {
-  font-size: 3rem;
-  color: #00509E;
-  margin-bottom: 1rem;
+.container {
+  max-width: 800px;
+  margin: auto;
 }
-.subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+.title {
+  font-size: 2.5rem;
+  color: #1E90FF;
+  margin-bottom: 1rem;
 }
 .content {
   font-size: 1.2rem;
-  margin: 1.5rem 0;
-  color: #ddd;
-  max-width: 700px;
   line-height: 1.8;
+  color: #D3D3D3;
 }
 
 /* Buttons */
-.btn {
+.button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #00509E;
+  background-color: #1E90FF;
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 700;
+  padding: 0.8rem 1.5rem;
   border-radius: 5px;
+  font-weight: 700;
+  margin: 2rem 0;
   text-decoration: none;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: all 0.3s ease;
 }
-.btn:hover {
-  background-color: #003D73;
-  transform: scale(1.1);
+.button:hover {
+  background-color: #00509E;
+  transform: translateY(-3px);
 }
 
-/* Navigation */
-.nav {
+/* Navigation Links */
+.navigation {
   margin-top: 2rem;
 }
-.nav a {
-  color: #00509E;
+.navigation a {
+  color: #1E90FF;
   text-decoration: none;
-  font-size: 1rem;
   margin: 0 1rem;
-  transition: color 0.3s;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
-.nav a:hover {
+.navigation a:hover {
   color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  animation: fadeIn 1s ease-out;
 }
