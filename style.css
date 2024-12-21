@@ -1,94 +1,96 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styles */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #000;
-  color: #d1e0f0;
-}
-
-.nav-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(13, 42, 89, 0.2);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  z-index: 50;
-}
-
-.nav-button img {
-  width: 24px;
-  height: 24px;
-}
-
-.nav-button {
-  background-color: transparent;
-  border: none;
-  padding: 1rem;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-button:hover {
-  transform: scale(1.1);
-}
-
-.external-link img {
-  width: 24px;
-  height: 24px;
-}
-
-.external-link {
-  padding: 1rem;
-  border-radius: 50%;
-  background-color: #2563eb;
   color: #fff;
+  line-height: 1.6;
 }
 
-.external-link:hover {
-  background-color: #1e40af;
-}
-
-.page-container {
-  padding: 3rem 1rem;
+h1, h2 {
+  color: #00509E;
   text-align: center;
 }
 
-.page-title {
+p {
+  margin: 0.5em 0;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #00509E;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003D73;
+}
+
+/* Landing Page */
+.landing-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  text-align: center;
+}
+
+.landing-page h1 {
   font-size: 3rem;
-  font-weight: bold;
-  color: #60a5fa;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
-.card {
-  background-color: rgba(13, 42, 89, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 20px;
-  margin-bottom: 2rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Navigation */
+nav {
+  background: #00509E;
+  padding: 10px 0;
+  text-align: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #60a5fa;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-.card-title {
-  font-size: 1.5rem;
-  color: #60a5fa;
-  margin-bottom: 1rem;
+nav ul li {
+  display: inline;
+  margin: 0 10px;
 }
 
-.card p {
-  line-height: 1.5;
-  color: #d1e0f0;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Footer */
+footer {
+  background: #000;
+  color: #00509E;
+  text-align: center;
+  padding: 10px 0;
 }
