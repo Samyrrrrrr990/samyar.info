@@ -13,21 +13,21 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2f 100%);
+            background: linear-gradient(135deg, #003366 0%, #001a33 100%);
             color: white;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
         nav {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             padding: 1.5rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         nav ul {
@@ -47,7 +47,7 @@
         }
 
         nav a:hover {
-            background: rgba(0, 102, 204, 0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
 
@@ -90,12 +90,12 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 5rem;
             margin-bottom: 1rem;
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-top: 2rem;
         }
 
@@ -137,6 +137,49 @@
         .project-card:hover {
             background: rgba(255, 255, 255, 0.08);
         }
+
+        .object {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+        }
+
+        .object:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 20%;
+            left: 10%;
+            animation: move 3s infinite alternate;
+        }
+
+        .object:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation: move 3s infinite alternate;
+        }
+
+        .object:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            top: 30%;
+            right: 30%;
+            animation: move 3s infinite alternate;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate3d(0, 0, 0);
+            }
+            100% {
+                transform: translate3d(20px, 20px, 0);
+            }
+        }
     </style>
 </head>
 <body>
@@ -151,6 +194,9 @@
     <div class="container">
         <div id="home" class="page home active">
             <div class="content-wrapper">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
                 <h1>Samyar Shafiee</h1>
                 <a href="https://linktr.ee/samyar1388" class="btn" target="_blank">Connect With Me</a>
             </div>
@@ -159,8 +205,8 @@
         <div id="biography" class="page biography">
             <div class="content-wrapper">
                 <h2>My Journey</h2>
-                <p>In 2022, I took a bold step and moved to Canada. Although English was a challenge, I persevered. Within a year, I earned the Grade 8 Math Award and made the Honor Roll.</p>
-                <p>High school brought new hurdles, especially with the demanding IB program. Yet, my dedication paid off, and I improved my academic average by 10% in my second year.</p>
+                <p>In 2022, I moved to Canada, where I faced language challenges but overcame them through determination. I won the Grade 8 Math Award and earned a place on the Honor Roll in my first year.</p>
+                <p>High school, particularly the IB program, was challenging, but I improved my academic performance by 10% in my second year.</p>
             </div>
         </div>
 
@@ -169,11 +215,11 @@
                 <h2>Research & Projects</h2>
                 <div class="project-card">
                     <h3>Academic Research</h3>
-                    <p>Co-authored and published a research paper distributed to over 30 universities.</p>
+                    <p>Co-authored and published a research paper that was distributed to over 30 universities.</p>
                 </div>
                 <div class="project-card">
                     <h3>Crypto-Fitness Innovation</h3>
-                    <p>Developing a workout app combining cryptocurrency rewards with support for cancer research.</p>
+                    <p>Developing a workout app with cryptocurrency rewards that supports cancer research.</p>
                 </div>
             </div>
         </div>
