@@ -19,11 +19,9 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             padding: 1.5rem;
             position: fixed;
             width: 100%;
@@ -42,7 +40,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
             padding: 0.5rem 1rem;
             border-radius: 5px;
@@ -53,7 +51,6 @@
             transform: translateY(-2px);
         }
 
-        /* Container and Pages */
         .container {
             position: relative;
             width: 100%;
@@ -75,7 +72,6 @@
             visibility: visible;
         }
 
-        /* Content Wrapper for Centered Content */
         .content-wrapper {
             display: flex;
             flex-direction: column;
@@ -88,63 +84,27 @@
             margin: 0 auto;
         }
 
-        /* Home Page */
-        .home {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        /* Objects */
-        .object {
-            position: absolute;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
-        }
-
-        .home .object {
-            transition: transform 0.2s ease-out;
-        }
-
-        .home .object:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: 20%;
-            left: 10%;
-        }
-
-        .home .object:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            top: 60%;
-            right: 15%;
-        }
-
-        .home .object:nth-child(3) {
-            width: 250px;
-            height: 250px;
-            top: 30%;
-            right: 30%;
-        }
-
-        /* Typography */
-        h1, h2, h3 {
-            color: white;
+        h1, h2 {
             margin-bottom: 2rem;
             text-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
         }
 
         h1 {
             font-size: 4rem;
+            margin-bottom: 1rem;
         }
 
-        /* Buttons */
+        h2 {
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
         .btn {
             background-color: #0066cc;
             color: white;
@@ -165,32 +125,17 @@
             box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
         }
 
-        /* Project Cards */
         .project-card {
             background: rgba(255, 255, 255, 0.05);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 10px;
-            transition: transform 0.3s ease;
-            cursor: pointer;
             border: 1px solid rgba(255, 255, 255, 0.1);
             width: 100%;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.08);
-        }
-
-        /* Contact Section */
-        .contact-info {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .contact p {
-            margin-top: 2rem;
-            opacity: 0.8;
         }
     </style>
 </head>
@@ -200,109 +145,47 @@
             <li><a href="#" data-page="home">Home</a></li>
             <li><a href="#" data-page="biography">Biography</a></li>
             <li><a href="#" data-page="projects">Projects</a></li>
-            <li><a href="#" data-page="contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
         <div id="home" class="page home active">
-            <div class="objects-container">
-                <div class="object" data-speed="0.05"></div>
-                <div class="object" data-speed="0.03"></div>
-                <div class="object" data-speed="0.04"></div>
+            <div class="content-wrapper">
+                <h1>Samyar Shafiee</h1>
+                <a href="https://linktr.ee/samyar1388" class="btn" target="_blank">Connect With Me</a>
             </div>
-            <h1>Samyar Shafiee</h1>
-            <a href="https://linktr.ee/samyar1388" class="btn" target="_blank">Connect With Me</a>
         </div>
 
         <div id="biography" class="page biography">
             <div class="content-wrapper">
-                <div class="object"></div>
-                <div class="object"></div>
                 <h2>My Journey</h2>
-                <p>In 2022, I embarked on a life-changing journey when I immigrated to Canada. Despite facing the challenge of limited English proficiency, my dedication and passion for learning helped me overcome these obstacles. Within my first year, I achieved remarkable success by winning the Grade 8 Math Award and securing a place on the Honor Roll.</p>
-                <br>
-                <p>The transition to high school, particularly with the demanding IB program, presented new challenges. However, through perseverance and determination, I not only adapted but thrived. In my second year, I improved my academic performance significantly, raising my average by 10% across all subjects.</p>
+                <p>In 2022, I took a bold step and moved to Canada. Although English was a challenge, I persevered. Within a year, I earned the Grade 8 Math Award and made the Honor Roll.</p>
+                <p>High school brought new hurdles, especially with the demanding IB program. Yet, my dedication paid off, and I improved my academic average by 10% in my second year.</p>
             </div>
         </div>
 
         <div id="projects" class="page projects">
             <div class="content-wrapper">
-                <div class="object"></div>
-                <div class="object"></div>
                 <h2>Research & Projects</h2>
                 <div class="project-card">
                     <h3>Academic Research</h3>
-                    <p>Successfully authored and published a research paper with a colleague, which has been distributed to over 30 universities for review and consideration.</p>
+                    <p>Co-authored and published a research paper distributed to over 30 universities.</p>
                 </div>
                 <div class="project-card">
                     <h3>Crypto-Fitness Innovation</h3>
-                    <p>Currently developing a revolutionary non-profit workout application that integrates cryptocurrency rewards. This subscription-based platform will channel all proceeds to cancer research while implementing a unique user reward system.</p>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact" class="page contact">
-            <div class="content-wrapper">
-                <div class="object"></div>
-                <div class="object"></div>
-                <h2>Get In Touch</h2>
-                <div class="contact-info">
-                    <a href="https://linktr.ee/samyar1388" class="btn" target="_blank">Linktree</a>
-                    <p>Email: samyar.shafiee2009@gmail.com</p>
+                    <p>Developing a workout app combining cryptocurrency rewards with support for cancer research.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Page Navigation
         document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const pageId = this.getAttribute('data-page');
-                showPage(pageId);
-            });
-        });
-
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            const selectedPage = document.getElementById(pageId);
-            if (selectedPage) {
-                selectedPage.classList.add('active');
-            }
-        }
-
-        // Cursor-based object movement on home page
-        const objects = document.querySelectorAll('.home .object');
-        let mouseX = 0;
-        let mouseY = 0;
-
-        document.addEventListener('mousemove', (e) => {
-            if (!document.getElementById('home').classList.contains('active')) return;
-
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-
-            objects.forEach(object => {
-                const speed = parseFloat(object.getAttribute('data-speed')) || 0.04;
-                const rect = object.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
-                const centerY = rect.top + rect.height / 2;
-
-                const distanceX = mouseX - centerX;
-                const distanceY = mouseY - centerY;
-
-                object.style.transform = `
-                    translate(
-                        ${distanceX * speed}px,
-                        ${distanceY * speed}px
-                    )
-                    rotate(${distanceX * 0.02}deg)
-                `;
+                document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
             });
         });
     </script>
