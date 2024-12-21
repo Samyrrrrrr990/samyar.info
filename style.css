@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #000;
   color: #fff;
   line-height: 1.6;
@@ -12,85 +12,62 @@ h1, h2 {
   text-align: center;
 }
 
-p {
-  margin: 0.5em 0;
+a {
+  color: #00509E;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header & Footer */
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
 }
 
 /* Button Styles */
 .btn {
   display: inline-block;
+  margin: 10px;
   padding: 10px 20px;
   color: #fff;
   background-color: #00509E;
   border: none;
   border-radius: 5px;
+  text-align: center;
   text-decoration: none;
   font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #003D73;
+  transform: scale(1.1);
 }
 
 /* Landing Page */
-.landing-page {
+.landing {
   height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #000;
+  justify-content: center;
+  background: linear-gradient(to bottom, #000, #111);
+}
+
+.content {
   text-align: center;
 }
 
-.landing-page h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-/* Navigation */
-nav {
-  background: #00509E;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
+/* Section Styles */
 .section {
   padding: 50px 20px;
   text-align: center;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: #00509E;
-  text-align: center;
-  padding: 10px 0;
 }
