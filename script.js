@@ -1,11 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".btn");
-  buttons.forEach(btn => {
-    btn.addEventListener("mouseover", () => {
-      btn.style.transform = "scale(1.1)";
-    });
-    btn.addEventListener("mouseout", () => {
-      btn.style.transform = "scale(1)";
+// Smooth scroll animation for navigation
+document.querySelectorAll('.navbar a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
   });
 });
