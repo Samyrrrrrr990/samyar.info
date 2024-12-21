@@ -3,37 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samyar's Digital Portfolio</title>
+  <title>Samyar Shafiee Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="landing-page">
+    <div class="container">
+      <h1>Samyar Shafiee</h1>
+      <a href="https://linktr.ee/samyar1388" target="_blank" class="btn">Visit My Linktree</a>
+    </div>
+  </header>
 
-  <!-- Navigation Bar -->
-  <div class="nav-bar">
-    <button class="nav-button" onclick="setActivePage('home')" id="home-btn">
-      <img src="icons/home.svg" alt="Home Icon">
-    </button>
-    <button class="nav-button" onclick="setActivePage('academic')" id="academic-btn">
-      <img src="icons/award.svg" alt="Award Icon">
-    </button>
-    <button class="nav-button" onclick="setActivePage('music')" id="music-btn">
-      <img src="icons/music.svg" alt="Music Icon">
-    </button>
-    <a 
-      href="https://linktr.ee/samyar1388?utm_source=linktree_admin_share" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      class="external-link"
-    >
-      <img src="icons/link2.svg" alt="Link Icon">
-    </a>
-  </div>
+  <nav>
+    <ul>
+      <li><a href="#biography">Biography</a></li>
+      <li><a href="#projects">Research & Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
 
-  <!-- Pages -->
-  <div id="app">
-    <!-- Pages will be dynamically loaded here -->
-  </div>
+  <section id="biography" class="section">
+    <div class="container">
+      <h2>Biography</h2>
+      <p>I am Samyar Shafiee, an immigrant who moved to Canada in 2022. Despite challenges with my English skills, I won the Grade 8 Math Award and made the Honour Roll the same year. The first year of high school, especially in the IB program, was tough, but I overcame the challenges and improved my average by 10% across all subjects in the second year. My journey is a testament to resilience and hard work.</p>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Research & Projects</h2>
+      <p>In 2024, my friend and I co-authored a research paper titled "The Mysteries of Quantum Physics: Exploring the Foundations, Phenomena, and Technological Implications," which we sent to over 30 universities. Currently, we are working on a crypto-based workout app as a non-profit. The app will reward users and donate subscription earnings to cancer research, creating a meaningful impact in both health and science.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:samyar.shafiee2009@gmail.com" class="btn">samyar.shafiee2009@gmail.com</a></p>
+      <a href="https://linktr.ee/samyar1388" target="_blank" class="btn">Visit My Linktree</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Samyar Shafiee. All rights reserved.</p>
+  </footer>
 </body>
 </html>
