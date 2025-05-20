@@ -13,9 +13,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
     <header class="header">
         <div class="header-content">
             <h1 class="logo-text">Samyar Shafiee</h1>
@@ -29,7 +26,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about-me.html">About</a></li>
                     <li><a href="achivments.html" class="active">Achievements</a></li>
-                    <li><a href="Extracurriculars.html">Extracurriculars</a></li>
+            
                     <li><a href="https://linktr.ee/samyar1388" target="_blank" class="contact-link">Contact</a></li>
                 </ul>
             </nav>
@@ -40,28 +37,36 @@
         <section class="achievements-hero">
             <div class="achievements-content">
                 <h2 class="section-title">Achievements</h2>
-                <p class="section-description">A collection of my academic and personal accomplishments</p>
+                <p class="section-description">A collection of my personal and academic accomplishments</p>
+                <div class="achievement-actions">
+                    <a href="Resume.pdf" download class="action-btn download-btn">
+                        <span>📄</span> Download Resume
+                    </a>
+                    <button class="action-btn gallery-btn" onclick="openGallery()">
+                        <span>🖼️</span> View Photos
+                    </button>
+                </div>
             </div>
         </section>
 
         <section class="achievements-grid">
             <div class="achievement-category">
-                <h3>Academic Excellence</h3>
+                <h3>Academic Goals</h3>
                 <div class="achievement-cards">
                     <div class="achievement-card">
                         <div class="achievement-icon">🎓</div>
                         <h4>IB Diploma Program</h4>
-                        <p>Currently enrolled in the prestigious IB Diploma Program at Cardinal Carter Catholic High School</p>
+                        <p>Currently enrolled in the IB Diploma Program at Cardinal Carter Catholic High School</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">📊</div>
-                        <h4>Mathematics Passion</h4>
-                        <p>Maintaining an average of 94% in Mathematics courses</p>
+                        <h4>Academic Feedback</h4>
+                        <p>I have been getting consistenly high grades and currently aiming for a 45/45</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">🏆</div>
                         <h4>Awards & Honors</h4>
-                        <p>Consistentily maintained honnor roll and got the mathematics award</p>
+                        <p>Consistently achieved Honor Roll & Math Award. Aiming for many more awards to come</p>
                     </div>
                 </div>
             </div>
@@ -71,18 +76,18 @@
                 <div class="achievement-cards">
                     <div class="achievement-card">
                         <div class="achievement-icon">🌍</div>
-                        <h4>French</h4>
-                        <p>Aiming for a B2 level in DELF</p>
+                        <h4>Bilingual Achievement</h4>
+                        <p>Will take the DELF French exam in a year. Currently aiming for a B2</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">📚</div>
                         <h4>Language Growth</h4>
-                        <p>Improved French grade from 60s to 80s through self-directed learning</p>
+                        <p>Improved French grade from 66% to 76% through self-directed learning</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">🎯</div>
-                        <h4>Academic Adaptation</h4>
-                        <p>Successfully overcame language barriers in a new country</p>
+                        <h4>Culturla Adaptation</h4>
+                        <p>Successfully overcame cultural & language barriers in a new country</p>
                     </div>
                 </div>
             </div>
@@ -93,17 +98,17 @@
                     <div class="achievement-card">
                         <div class="achievement-icon">👨‍🏫</div>
                         <h4>Math Buddies Program</h4>
-                        <p>Active tutor at Aurora Public Library, helping younger students with mathematics</p>
+                        <p>Active tutor at Aurora Public Library, helping younger kids with math problems</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">🏥</div>
-                        <h4>Healthcare Volunteering</h4>
-                        <p>Approved volunteer at Southlake Hospital, contributing to the community</p>
+                        <h4>Southlake Volunteering</h4>
+                        <p>Voulenteered for Southlake's Nature Eporium Run which rose over $450,000 for the hospital</p>
                     </div>
                     <div class="achievement-card">
                         <div class="achievement-icon">🎵</div>
-                        <h4>Music Experience</h4>
-                        <p>Qualified for Nationals at Ontario Band Association</p>
+                        <h4>Concert Band</h4>
+                        <p>Qualified for Nationals at Ontario Band Association with my school's concert band</p>
                     </div>
                 </div>
             </div>
@@ -114,12 +119,53 @@
         <div class="footer-content">
             <p>&copy; 2024 Samyar Shafiee. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://github.com/Samyrrrrrr990" class="social-link">GitHub</a>
-                <a href="https://www.instagram.com/samyar.sh09/" class="social-link">Instagram</a>
-                <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage" class="social-link">Indeed</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
             </div>
         </div>
     </footer>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="gallery-header">
+            <h3>Photo Gallery</h3>
+            <button class="close-gallery" onclick="closeGallery()">×</button>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/IMG 8186 Preview.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG_0226.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG 0155.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG 0014.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG_4090.JPG" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG_0222.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG_0224.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/IMG_0225.jpg" alt="Achievement Photo">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Aurora Public Library Club Creation Certificate.jpg" alt="Achievement Photo">
+            </div>
+        </div>
+         <!-- Single Image View -->
+        <div class="single-image-view">
+            <img src="" alt="Selected Achievement Photo">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
